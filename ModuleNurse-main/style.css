@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+body{
+    background-image: linear-gradient( to bottom, #19bc9c, #2c3d4f);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.container__button{
+    display: flex;
+    align-items: center;
+}
+.listForm {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    background-color: transparent;
+    transition: all ease .3s;
+
+}
+#QAcode {
+    border: 5px solid #2c3d4f;
+    background-color: #fff;
+    position: relative;
+    
+}
+.col {
+    width: 33.3333%;
+    height: 155px;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: -5.5%;
+}
+.row {
+    height: 33.3333%;
+    width: 155px;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin-left: -5.5%;
+}
+
+.QRline {
+    width: 100%;
+    height: 5px;
+    background-color: #19bc9c;
+    animation-name: scan;
+    box-shadow: 0px 0px 8px 10px rgba(25, 188, 156, 0.49);
+    top:50%;
+    position: absolute;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    bottom: -1px;
+    z-index: 10;
+}
+.container {
+    max-width: 33.3333%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: #fff;
+    height: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+form {
+    display: flex;
+    height: 100%;
+    width: 33.3333%;
+}
+.container__left, .container__right {
+    flex: 1;
+}
+.container__right--QAcode {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8%;
+    position: relative;
+    margin-bottom: 2%;
+}
+.container__right--QAcode img {
+    width: 150px;
+    height: 150px;
+}
+.container__left--title {
+    margin: 10% 0 5% 0;
+}
+.container__left--title h3 {
+    text-align: center;
+}
+.container__left--line {
+    position: relative;
+    margin: 20px 0;
+}
+.container__left--line .line {
+    width: 50%;
+    height: 1px;
+    background-color: #333;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+.container__left--line .card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 50px;
+    bottom: -15px;
+}
+.container__left--line .card i{
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 150px;
+    height: 30px;
+    background-color: #19bc9c;
+    text-align: center;
+    color: #fff;
+    padding-top: 1%;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.btn:hover {
+    background-color: rgba(25, 188, 156, .8);
+}
+.container__left--description label{
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    margin: 5% 0 0 0;
+    color: rgb(75, 150, 255);
+    cursor: pointer;
+}
+.container__left--description label:hover {
+    color: rgb(220, 78, 78);
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+}
+.input--text {
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(172, 172, 172);
+    transition: .25s ease;
+    background-color: #fff;
+}
+.form__field {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 40px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+.form__field label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    font-size: 12px;
+    transition: .25s ease;
+
+}
+.input--text:focus{
+    outline: none !important;
+    border-color: #19bc9c;
+    background-color: #fff;
+}
+.input--text:not(:placeholder-shown) + .form__label, 
+.input--text:focus + .form__label {
+    top: 0;
+    padding:0 10px;
+    display: inline-block;
+    background-color: #fff;
+    color: #19bc9c;
+    transition: .25s ease;
+}
+.gender {
+    width: 80%;
+    margin: 0 auto;
+}
+.note p {
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
+
+.btn--previous i:hover {
+    opacity: 1;
+}
+
+.form__wrapper--diffirent form .container__left .form__input {
+    margin-top: 10%;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: none;
+}
+
+@keyframes scan {
+    0% {
+        box-shadow: 0px 0px 8px 10px rgba(25, 188, 156, 0.49);
+        top: 50%;
+    }  
+    25% {
+        box-shadow: 0px 0px 8px 10px rgba(25, 188, 156, 0.49);
+        top: 5px;
+    }
+    75% {
+        box-shadow: 0px 0px 8px 10px rgba(25, 188, 156, 0.49);
+        top: 98%;
+    }
+}
+
+@media only screen and (max-width : 321px) {
+    .container {
+        max-width: 80%;
+    }
+    .wrapper {
+        max-width: 80%;
+    }
+    .form__wrapper--diffirent {
+        max-width: 80%;
+    }
+    .container__left--title {
+        margin-top: 40%;
+    }.container__right--QAcode {
+        margin: 15% 0;
+    }
+    .container__left--description {
+        margin-top: 10%;
+    }
+}
+
+  /* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 80%;
+    }
+    .container__left--title {
+        margin-top: 40%;
+    }
+    .container__right--QAcode {
+        margin: 15% auto;
+    }
+    .container__left--description {
+        margin-top: 10%;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+@media only screen and (max-width : 1024px) {
+    .container {
+        max-width: 50%;
+    }
+}
+#turnOn:checked~.overlay{
+    display: block;
+}
+
+
+.preview {
+    /* width: 150px;
+    height: 150px; */
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    z-index: 10;
+}
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    display: none;
+}
+.overlay .container__right--QAcode {
+    position: absolute;
+    top: 31.5%;
+    transform: translateY(-50%);
+}

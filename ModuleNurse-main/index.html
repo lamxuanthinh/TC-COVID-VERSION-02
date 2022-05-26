@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/Home/Home-Page/assets/img/logo-version04.png" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y TÁ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0634ae970e.js" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" name="" id="turnOn" hidden >
+    <label for="turnOn" class="overlay">
+        <div class="container__right--QAcode" id="QAcode">
+            <div class="col"></div>
+            <div class="row"></div>                        
+            <video width="148px" height="148px" class="preview"></video>
+            <div class="QRline"></div>
+        </div>
+    </label>
+    <div class="container">                        
+        <div class="listForm">
+            <form method="" action="">            
+                <div class="container__left">
+                    <div class="container__left--title">
+                        <h3 style="color: #333;">Thông tin cá nhân</h3>
+                    </div>
+                    <div class="container__left--line">
+                        <div class="line"></div>
+                        <div class="card"><i class="fa fa-address-card"></i></div>
+                    </div>
+                    <div class="container__right--QAcode" id="QAcode">
+                        <div class="col"></div>
+                        <div class="row"></div>                        
+                        <div class="QRline"></div>
+                    </div>
+                    <div class="btn btn--QR" onclick="scannerQA()" style="cursor: pointer;">
+                        <label for="turnOn">Quét mã QR</label>
+                    </div>
+                    <div class="container__left--description">
+                        <label for="forgetCMND" id="labelForget"><u>Bạn quên không mang CMND/CCCD?</u></label>
+                    </div>
+
+                </div>
+            </form>
+        <form method="" action="" id="formInformation">            
+            <div class="container__left">
+                <div class="container__left--title">
+                    <h3 style="color: #333;">Thông tin cá nhân</h3>
+                </div>
+                <div class="container__left--line">
+                    <div class="line"></div>
+                    <div class="card"><i class="fa fa-address-card"></i></div>
+                </div>
+                <div class="form__input">
+                    <div class="form__field">
+                        <input type="text" name="name" class="input--text" placeholder=" " >
+                        <label for="" class="form__label">Họ và tên</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="date" class="input--text" name="date">
+                    </div>
+                    <div class="gender">
+                        <label for="">Giới tính:</label>
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Nam</label>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Nữ</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="text" name="queQuan" class="input--text" placeholder=" ">
+                        <label for="" class="form__label">Quê quán</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="text" name="noiThuongTru" class="input--text" placeholder=" ">
+                        <label for="" class="form__label">Nơi thường trú</label>
+                    </div>
+                </div>
+                <div class="note">
+                    <p>Lưu ý: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình sự.</p>
+                </div>
+                <label for="nextForm">
+                    <div class="container__button">
+                        <div class="btn btn--pre">
+                            Quay lại
+                        </div>
+                        <div class="btn btn--next">
+                            Tiếp theo
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </form>
+        <form method="" action="">            
+            <div class="container__left">
+                <div class="container__left--title">
+                    <h3 style="color: #333;">Thông tin cá nhân khác</h3>
+                </div>
+                <div class="container__left--line">
+                    <div class="line"></div>
+                    <div class="card"><i class="fa fa-address-card"></i></div>
+                </div>
+                <div class="form__input">
+                    <div class="form__field">
+                        <input type="number" name="name" class="input--text" placeholder=" " >
+                        <label for="" class="form__label">Số điện thoại</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="number" name="" class="input--text" placeholder=" ">
+                        <label for="" class="form__label">Số thẻ bảo hiểm y tế</label>
+                    </div>
+                    <div class="form__field">
+                        <input type="email" name="" class="input--text" placeholder=" ">
+                        <label for="" class="form__label">Email</label>
+                    </div>
+                </div>
+                <div class="note">
+                    <p>Lưu ý: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình sự.</p>
+                </div>
+                <div class="container__button">
+                    <div class="btn btn--pre">
+                        Quay lại
+                    </div>
+                    <div class="btn btn--next">
+                        <a href="/ModuleDocter01/sloctc.html">Xong</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

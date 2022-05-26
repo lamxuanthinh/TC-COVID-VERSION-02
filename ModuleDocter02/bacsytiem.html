@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/Home/Home-Page/assets/img/logo-version04.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÁC SĨ TIÊM</title>
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bstiem.css">
+</head>
+
+<body>
+    <div class="phan-logo">
+        <img class="logo" src="/Home/Home-Page/assets/img/logo-version04.png" alt=""> 
+        <a class="tenweb">TC-COVID</a>
+    </div>
+    <div class="container1">
+        <div class="khung">
+            <div class="xacthuctiemchung">Xác thực tiêm chủng</div>
+            <div class="bangthongtin">
+                <div class="tieude">Thông tin người tiêm</div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" id="id1" colspan="2">Số CCCD/Hộ chiếu : </div>
+                    <div colspan="2"><input type="text" id="id" class="form" readonly placeholder="012345678987"
+                            pattern="[0-9]{12}" required></div>
+                </div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" colspan="2">Họ và tên : </div>
+                    <div colspan="2"><input type="text" class="form" readonly placeholder="Nguyễn Văn A"></div>
+                </div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" colspan="2">Giới tính : </div>
+                    <div colspan="2"><input type="text" class="form" placeholder="Nam/Nữ" readonly></div>
+                </div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" colspan="2">Ngày sinh : </div>
+                    <div colspan="2"><input type="text" class="form" readonly placeholder="dd-mm-yyyy"></div>
+                </div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" colspan="2">Số điện thoại : </div>
+                    <div colspan="2"><input type="tel" readonly type="tel" placeholder="0123456789" pattern="[0-9]{10}"
+                            required class="form"></div>
+                </div>
+                <div class="thongtinnguoitiem">
+                    <div class="muccannhap" colspan="2">Địa chỉ : </div>
+                    <div colspan="2"><textarea class="formarea" readonly
+                            placeholder="470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng"></textarea></div>
+                </div>
+                <div class="dadctiemvacxin">Đã được tiêm vắc xin phòng bệnh Covid-19 :</div>
+                <div class="somui">
+                    <div class="mui1" colspan="4">Mũi tiêm thứ 1</div>
+                    <div class="thongtintiem">
+                        <div class="loaivaccine"> Ngày tiêm : </div>
+                        <div><input type="text" class="nhapvaccine" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                    <div class="thongtintiem1">
+                        <div class="loaivaccine1">Loại vắc xin :</div>
+                        <div><input type="text" class="nhapvaccine1" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                    <div class="mui2" colspan="4">Mũi tiêm thứ 2</div>
+                    <div class="thongtintiem">
+                        <div class="loaivaccine">Ngày tiêm :</div>
+                        <div><input type="text" class="nhapvaccine" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                    <div class="thongtintiem1">
+                        <div class="loaivaccine1">Loại vắc xin :</div>
+                        <div><input type="text" class="nhapvaccine1" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                    <div class="mui3" colspan="4">Mũi tiêm thứ 3</div>
+                    <div class="thongtintiem">
+                        <div class="loaivaccine">Ngày tiêm :</div>
+                        <div><input type="text" class="nhapvaccine" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                    <div class="thongtintiem1">
+                        <div class="loaivaccine1">Loại vắc xin :</div>
+                        <div><input type="text" class="nhapvaccine1" readonly placeholder="chưa tiêm"></div>
+                    </div>
+                </div>
+                <div class="khungtiem">
+                    <div class="muihientai">Mũi tiêm hiện tại</div>
+                    <div class="muimoi">
+                        <div class="ngaytiemmoi">Ngày tiêm</div>
+                        <div><input type="datetime-local" class="nhapmoi"></div>
+                    </div>
+                    <div class="muimoi">
+                        <div class="ngaytiemmoi1">Loại vắc xin</div>
+                        <div>
+                            <select name="" id="" class="nhapmoi1">
+                                <option value="">AstraZeneca</option>
+                                <option value="">Gam-COVID-Vac/SPUTNIK V</option>
+                                <option value="">Vero Cell</option>
+                                <option value="">Pfizer/BioNTech</option>
+                                <option value="">Spikevax/Moderna</option>
+                                <option value="">Janssen</option>
+                                <option value="">Hayat-Vax</option>
+                                <option value="">Abdala</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- nut bam ------------------------------------------------------------- -->
+        <div align="center"><button id="myBtn"><b>Hoàn thành</b></button></div>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <div class="tieudeinphieu">In phiếu xác nhận tiêm chủng COVID-19</div>
+                </div>
+                <div class="modal-body">
+                    <p class="cauhoi">Bạn có muốn in phiếu xác nhận tiêm chủng COVID-19 không?</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="container2">
+                        <div class="yes">
+                            <input type="radio" name="size" id="co" checked="checked">
+                            <label for="co" class="chonco">Có</label>
+                        </div>
+                        <div class="no">
+                            <input type="radio" name="size" id="ko">
+                            <label for="ko" class="chonko">Không</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="danhsachchuatiem">
+            <div class="navigation">
+                <ul>
+                    <li class="list1">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title1">	Danh sách những người chưa tiêm</span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title">Nguyễn thinh Hùng Phương</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title">Lâm Xuân Thịnh</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title">Hoàng Thế Luân</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title">Nguyễn Hoàng Việt</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="title">Ngô Hùng Sở</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="toggle">
+                <ion-icon name="menu-outline" class="open"><label class="bi bi-person-lines-fill"></label></ion-icon>
+                <ion-icon name="close-outline" class="close"><i class="bi bi-x"></i></ion-icon>
+            </div>
+        
+            <!----JS CDN Link---->
+            <script src="bstiem.js"></script>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
